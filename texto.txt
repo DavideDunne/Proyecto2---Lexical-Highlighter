@@ -1,0 +1,12 @@
+int main (){
+
+string hola= "hola";
+int mundo= 5;
+
+// hola mundo
+if( mundo == 5 ){
+
+	cout<<"hola mundo"; 
+}
+
+}
