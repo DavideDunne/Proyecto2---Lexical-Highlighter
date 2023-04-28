@@ -1,12 +1,13 @@
 int main (){
 
-string hola= "hola";
-int mundo= 5;
+string hola = "hola" ;
+int mundo = 15 ;
+int arreglo[5] ;
 
 // hola mundo
-if( mundo == 5 ){
+if (mundo==15) {
 
-	cout<<"hola mundo"; 
+	cout << "hola" ; 
 }
 
 }
