@@ -1,3 +1,6 @@
+#Raúl Antonio Castillejos Santillán A01174919@tec.mx
+#Davide Dunne Sanchez A01642355@tec.mx
+
 import re
 
 entero = re.compile("int") #match int keywords
@@ -10,11 +13,12 @@ terminador = re.compile(";") #match semicolon
 bracketStart = re.compile("{") #match start of curly braces
 bracketEnd = re.compile("}") #match end of curly braces
 variable = re.compile("[a-z]+") #match character strings
-parenthesis = re.compile("^\(.{0,}\)$") #Match strings that are inside of a parenthesis
-comillas = re.compile("^\".{0,}\"$") # match strings that are inside of a " "
+parenthesis = re.compile("^\(.*\)$") #Match strings that are inside of a parenthesis
+comillas = re.compile("^\".*\"$") # match strings that are inside of a " "
 square_brackets = re.compile("[a-z]+\[.{0,}\]$") #match strings that are inside single square brackets
 cout = re.compile("<{2}") #matches the << symbols
 number = re.compile("[0-9]+") #matches all numbers
+macro = re.compile("^#\w+$") #match macros (ex. #include, #define, #ifndef)
 
 archivo = open("texto.txt","r")
 open('file.html', 'w').close()
