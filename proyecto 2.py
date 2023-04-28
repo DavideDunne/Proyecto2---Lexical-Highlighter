@@ -1,3 +1,6 @@
+#Raúl Antonio Castillejos Santillán A01174919
+#Davide Dunne Sanchez A01642355
+
 import re
 
 entero = re.compile("int\b") #match int keywords
@@ -10,6 +13,7 @@ brackets = re.compile("{|}") #match either curly braces
 variable = re.compile("[a-z]+") #match character strings
 parenthesis = re.compile("^\(.{0,}\)$") #Match strings that are inside of a parenthesis
 square_brackets = re.compile("^\[.{0,}\]$") #match strings that are inside single square brackets
+macro = re.compile("^#\w{1,}$") #match macros (ex. #include, #define, #ifndef)
 
 archivo = open("texto.txt","r")
 palabra = "int x string a hola()"
