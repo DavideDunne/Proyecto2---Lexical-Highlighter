@@ -1,18 +1,15 @@
 import re
 
-
-
-
-
-
-entero = re.compile("int")
-string = re.compile("string")
-igualacion = re.compile("={2}")
-asignacion = re.compile("={1}")
-comentario = re.compile("\/{2}")
-terminador = re.compile(";")
-brackets = re.compile("{|}")
-variable = re.compile("[a-z]+")
+entero = re.compile("int\b") #match int keywords
+string = re.compile("string\b") #match string keywords
+igualacion = re.compile("={2}\b") #match equal sign
+asignacion = re.compile("={1}\b")
+comentario = re.compile("\/{2}") #match double slash
+terminador = re.compile(";") #match semicolon
+brackets = re.compile("{|}") #match either curly braces
+variable = re.compile("[a-z]+") #match character strings
+parenthesis = re.compile("^\(.{0,}\)$") #Match strings that are inside of a parenthesis
+square_brackets = re.compile("^\[.{0,}\]$") #match strings that are inside single square brackets
 
 archivo = open("texto.txt","r")
 palabra = "int x string a hola()"
